@@ -1,0 +1,26 @@
+.container {
+	margin-top:20px;
+	width: 65%;
+}
+
+.header {
+	width: 65%;
+	padding: 40px auto;
+	display: flex;
+	justify-content:space-between;
+	background-color: #efefef;
+}
+
+.header > h6 {
+	border-bottom: 0;
+	color: #676767;
+	margin: 20px;
+	transition: border-bottom 0.5s;
+	font-size: 80%;
+}
+
+.header > h6.active {
+	border-bottom: 1px solid lightblue;
+	color: lightblue;
+}
+

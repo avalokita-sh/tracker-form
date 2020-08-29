@@ -1,0 +1,12 @@
+.date__group {
+	display:flex;
+	align-items:center;
+	margin-top: 20px;
+}
+
+.date__item{
+	display: flex;
+	flex-direction:column;
+	margin-right: 50px;
+	margin-bottom: 80px;
+}
