@@ -22,7 +22,8 @@ class StepForm extends React.Component {
     error:{
       budget:'',
       impressions:''
-    }
+    },
+    submitted: false
   }
 
   componentDidMount() {
@@ -30,7 +31,8 @@ class StepForm extends React.Component {
   }
   //Form submit
   handleSubmit = event => {
-    event.preventDefault();    
+    event.preventDefault(); 
+    this.setState({submitted:true});   
     const { campaignType, channelTypes, trackingOptions, startDate, endDate,budget,impressions } = this.state;
     const result = {
        campaignType:campaignType,
@@ -157,6 +159,7 @@ previousButton() {
   if(currentStep !==1){
     return (
       <button 
+        disabled={this.state.submitted}
         className="btn btn-secondary" 
         type="button" onClick={this.prev}>
       Previous
